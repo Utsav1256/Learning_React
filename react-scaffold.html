@@ -1,19 +1,27 @@
 <html>
     <head>
         <title>  Demo  </title>
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
         <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
     </head>
     <body>
         <div id="app"></div>
-        <!--  writing component -->
+        
         <script type="text/babel">
+            // Writing component 
             function App() {
                 // what we want to display
                 return <h1>Hello World</h1>  //<h1>Hello World</h1> -> this is not html, this is JSX
-            }
+            };
+            // Rendering component 
+            ReactDOM.render (  
+                <App />, //component
+                document.getElementById('app') // i want to render it in id 'app'
+            );
         </script>
+        
+        
     </body>
 </html>
