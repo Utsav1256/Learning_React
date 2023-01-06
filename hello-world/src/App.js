@@ -3,17 +3,15 @@ import './App.css';
 
 function App() {
   const name = 'Utsav';
-  const loading = false; //  created a variable
+  const isLoggedin = false; //  created a variable
 
-  if(loading) { //if loading = true; then hum ysha se aage nahi ja payenge and kyuki hum yahi par return kar rahe hai
-    return <h1>Loading!</h1>// therefor, screen par Loading! show hoga bas :)
-  }
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello {name}
+          Hello {isLoggedin ? name : 'world'} 
+          {/* usint ternary operator, if isLoggedin = true -> to name show hoga if false -> to world show hoga */}
         </p>
         <a
           className="App-link"
