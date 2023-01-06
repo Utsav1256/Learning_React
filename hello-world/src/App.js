@@ -3,16 +3,17 @@ import './App.css';
 
 function App() {
   const name = 'Utsav';
-  const isLoggedin = false; //  created a variable
+  const isLoggedin = true; //  created a variable
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello {isLoggedin ? name : 'world'} 
-          {/* usint ternary operator, if isLoggedin = true -> to name show hoga if false -> to world show hoga */}
-        </p>
+        {!isLoggedin && <p>Hello World</p>}
+        {isLoggedin && <p>Hello {name}</p>}
+        {/* we can also use '&&' of javascript, !isLoggedin -> not loggedin -> Hello World */}
+        {/*if in js ->  true && expression -> the expression is returned */}
+        {/* This is another way of doing conditional rendering inside jsx */}
         <a
           className="App-link"
           href="https://reactjs.org"
